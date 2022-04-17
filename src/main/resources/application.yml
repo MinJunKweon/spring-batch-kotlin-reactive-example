@@ -1,0 +1,21 @@
+server.port: 8080
+
+spring:
+  r2dbc:
+    url: r2dbc:mysql://localhost/sample
+    username: user
+    password: pwd
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: product-db
+  mongodb:
+    embedded:
+      version: 3.4.5
+
+---
+spring:
+  config.activate.on-profile: dev
+  r2dbc.url: r2dbc:mysql://mysql/sample
+  data.mongodb.host: mongodb
