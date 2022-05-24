@@ -9,10 +9,11 @@ spring:
     mongodb:
       host: localhost
       port: 27017
-      database: product-db
+      database: db
   mongodb:
     embedded:
       version: 3.4.5
+  batch.job.names: dummyDataInputJob
 
 ---
 spring:
